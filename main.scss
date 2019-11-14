@@ -1,0 +1,255 @@
+@import "circle";
+
+@mixin clearfix {
+    content: '';
+    display: table;
+    clear: both;
+    
+}
+@mixin centerabs {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+}
+
+@keyframes animation-left{
+    0%{
+        transform: translateX(40rem);
+        -webkit-transform: translateX(40rem);
+        -moz-transform: translateX(40rem);
+        -ms-transform: translateX(40rem);
+        -o-transform: translateX(40rem);
+}
+
+100%{
+    transform: translateX(-40rem);
+    -webkit-transform: translateX(-40rem);
+    -moz-transform: translateX(-40rem);
+    -ms-transform: translateX(-40rem);
+    -o-transform: translateX(-40rem);
+}
+}
+@keyframes animation-rotate720{
+    0%{
+        transform: rotate(0) scale(1);
+        -webkit-transform: rotate(0) scale(1);
+        -moz-transform: rotate(0) scale(1);
+        -ms-transform: rotate(0) scale(1);
+        -o-transform: rotate(0) scale(1);
+}
+50%{
+    transform: rotate(180deg) scale(1.5);
+    -webkit-transform: rotate(180deg) scale(1.5);
+    -moz-transform: rotate(180deg) scale(1.5);
+    -ms-transform: rotate(180deg) scale(1.5);
+    -o-transform: rotate(180deg) scale(1.5);
+}
+100%{
+    transform: rotate(360deg) scale(1);
+    -webkit-transform: rotate(360deg) scale(1);
+    -moz-transform: rotate(360deg) scale(1);
+    -ms-transform: rotate(360deg) scale(1);
+    -o-transform: rotate(360deg) scale(1);
+}
+}
+@keyframes anmation-zoom-in-out{
+    0%{
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+}
+50%{
+    transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    -o-transform: scale(1.5);
+}
+100%{
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+}
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 62.5%;
+    padding: 0 3rem;
+    background: #333;
+    font-family: 'Literata', serif;
+}
+.section-header{
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: 
+    linear-gradient(to left bottom,
+    rgba(#333,0.8),
+    rgba(#777,0.8)) ,
+    url('./images/me.jpg')!important;
+    background-size: 100% !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-attachment: fixed !important;
+}
+.navigation{
+    //background: orangered;
+    height: 20vh;
+    width: 100%;
+    position: relative;
+     &__nav{
+       
+         position: relative;
+         height: 100%;
+         width: 100%;
+         background-image: linear-gradient(to right bottom,rgba(#333,.5),rgba(#555,0.5));
+         margin: .5rem auto;
+         border-radius: .4rem;
+         
+ 
+     }
+     &__list{
+         width: 100%;
+         @include centerabs;
+         display: flex;
+         justify-content: center;
+         margin: 0;
+         padding: 0;
+         z-index: 1;
+         
+         
+     }   
+    
+     &__item{
+         list-style: none;
+         &:not(:last-child){
+             margin-left: 0;
+         }
+                
+     }
+     &__link{
+        color:#ccc !important;
+        text-decoration: none !important;
+        font-size: 1.6rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        padding: 1rem 2rem;
+        transition: all .4s;
+        display: inline-block;
+        position: relative;
+        overflow: hidden;
+        &::before{
+            content: '';
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            color: #ccc;
+            border-top: .1rem solid orangered;
+            border-bottom: .1rem solid orangered;
+            transform: scaleY(2);
+            opacity: 0;
+            z-index: 1;
+            border-radius: 50%;
+            transition: all .4s .6s;
+        }
+        &:hover:before{
+            transform: scaleY(1);
+            opacity: 1;
+        }
+        &::after{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height:100%;
+            width: 5%;
+            transform: scaleY(0);
+            transform-origin: bottom;
+            background-image: linear-gradient(to right ,rgba(#ff22ee,.9),rgba(#ff5544,0.9));
+            z-index: -1;
+            border-radius: 50%;
+            transition: transform .4s, width .2s .4s ;
+        }
+        &:hover:after{
+           transform: scaleY(1);
+           opacity: 1;
+           width: 100%;
+           
+        }
+    }
+}
+.section-skills{
+    width: 100%;
+   padding: 10rem 0;
+   position: relative;
+    background: #ccc;
+    
+}
+////typography////
+.main-text-header{
+    @include centerabs();
+   // background: #ff5544;
+    overflow: hidden;
+    &>h1{
+        font-size: 3rem;
+        font-weight: 700;
+        letter-spacing: 0.2rem;
+        text-transform: uppercase;
+        color: #bbbddd;
+        animation: animation-left 12s linear infinite;
+        -webkit-animation: animation-left 12s linear infinite;
+        transition: all 2s ease;
+        -webkit-transition: all 2s ease;
+        -moz-transition: all 2s ease;
+        -ms-transition: all 2s ease;
+        -o-transition: all 2s ease;
+}
+}
+.secondary-text{
+    font-size:3rem;
+    font-weight: 700;
+    letter-spacing: 0.4rem;
+    display: inline-block;
+    background-image: linear-gradient(to right,#ff22ee, #ff2244);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transition: all 1s ease-out;
+    -webkit-transition: all 1s ease-out;
+    -moz-transition: all 1s ease-out;
+    -ms-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
+    &:hover{
+        animation: animation-rotate720 1s linear;
+        -webkit-animation: animation-rotate720 1s linear;
+}
+}
+//utilites///
+.u-center-text{
+    text-align: center;
+    //background: chocolate;
+}
+.u-margin-bottom-huge{
+    margin-bottom: 10rem;
+}
+.u-margin-left-normal{
+    left: 3rem;
+    top: 5rem;
+    
+}

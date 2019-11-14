@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css?family=Literata:400,600,700&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="circles-Styles/yellowcircle.css">
+<link rel="stylesheet" href="circles-Styles/purplecircle.css">
+<link rel="stylesheet" href="circles-Styles/firecircle.css">
+<link rel="stylesheet" href="circles-Styles/whitecircle.css">
+<link rel="stylesheet" href="circles-Styles/simplecircle.css">
+<link rel="stylesheet" href="/bootstrap.min.css">
+    <title>Portfolio</title>
+</head>
+<body>
+    <section class="section-header">
+        <div class="navigation">
+            <div class="navigation__nav">
+                <div class="navigation__list">
+                  <div class="navigation__item"><a href="#" class="navigation__link">Home</a></div>
+                  <div class="navigation__item"><a href="#skills" class="navigation__link">skills</a></div>
+                  <div class="navigation__item"><a href="#" class="navigation__link">expriance</a></div>
+                  <div class="navigation__item"><a href="#" class="navigation__link">about</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="main-text-header">
+            <h1>eng:mamon hamed</h1>
+        </div>
+        
+    </section>
+    <section class="section-skills" id="skills">
+        <div class="u-center-text u-margin-bottom-huge">
+            <h2 class="secondary-text">Skills</h2>
+        </div>
+        <div class="container ">
+                <div class="row ">
+                        <div class=" col-md-4 u-center-text">
+                            <h2>HTML</h2>
+                                <div id="myInstance" class="fire u-margin-left-normal">
+                            
+                                        <div class=" loader-bg">
+                                      
+                                          <div class="text">00:00:00</div>
+                                      
+                                        </div>
+                                      
+                                      </div>
+                        </div>
+                        
+                        <div class="col-md-4 u-center-text">
+                            <h2>CSS</h2> 
+                                <div id="myInstance2" class="fire u-margin-left-normal ">
+                                        
+                                        <div class=" loader-bg">
+                                      
+                                          <div class="text">00:00:00</div>
+                                      
+                                        </div>
+                                      
+                                      </div>
+                        </div>
+                        <div class="col-md-4 u-center-text"> 
+                            <h2>Java Script</h2>
+                                <div id="myInstance3" class="fire u-margin-left-normal">
+                            
+                                        <div class=" loader-bg">
+                                      
+                                          <div class="text">00:00:00</div>
+                                      
+                                        </div>
+                                      
+                                      </div>
+                        </div>
+                    </div>
+        </div>
+        
+       
+                
+</div>
+
+    </section>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="/circle.js"></script>
+    <script>
+        new Circlebar({
+    element : "#myInstance",
+    // starting time
+  startValue: 0,
+
+// max time
+maxValue: 95,
+
+// in milliseconds
+counter: 2000,
+
+// should the circles styling alters according to progress level
+triggerPercentage: true,
+
+// timer, progress or manual
+type: "progress",
+
+// the width of the dial
+dialWidth: 15,
+
+// font size
+fontSize: "25px",
+
+// font color
+fontColor: "rgb(135, 206, 235)",
+
+// skin name
+skin: "",
+
+// the size of the circle
+size: "250px"
+    
+});
+
+new Circlebar({
+    element : "#myInstance2",
+    // starting time
+  startValue: 0,
+
+// max time
+maxValue: 90,
+
+// in milliseconds
+counter: 2000,
+
+// should the circles styling alters according to progress level
+triggerPercentage: true,
+
+// timer, progress or manual
+type: "progress",
+
+// the width of the dial
+dialWidth: 15,
+
+// font size
+fontSize: "25px",
+
+// font color
+fontColor: "rgb(135, 206, 235)",
+
+// skin name
+skin: "",
+
+// the size of the circle
+size: "250px"
+    
+});
+new Circlebar({
+    element : "#myInstance3",
+    // starting time
+  startValue: 0,
+
+// max time
+maxValue: 85,
+
+// in milliseconds
+counter: 2000,
+
+// should the circles styling alters according to progress level
+triggerPercentage: true,
+
+// timer, progress or manual
+type: "progress",
+
+// the width of the dial
+dialWidth: 15,
+
+// font size
+fontSize: "25px",
+
+// font color
+fontColor: "rgb(135, 206, 235)",
+
+// skin name
+skin: "",
+
+// the size of the circle
+size: "250px"
+    
+});
+
+    </script>
+</body>
+</html>
